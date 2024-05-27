@@ -1,0 +1,8 @@
+services:
+  jebena-client:
+    build: .
+    command: 'tail -f /dev/null'
+    container_name: jebena-client
+    volumes:
+      - ./app:/home/app
+      - ${JEBENA_KEYS_SH:-/dev/null}:/home/jebena-keys.sh
